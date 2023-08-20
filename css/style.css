@@ -83,7 +83,7 @@ object-fit: contain !important;
     font-weight: 900;
   }
 
-  .form-style a{
+  .form-style {
     font-size: 18px;
     color: #fff;
     text-align: center;
