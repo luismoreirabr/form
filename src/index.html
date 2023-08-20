@@ -18,38 +18,40 @@
 </head>
 
 <body class="flex justify-center items-center min-h-screen bg-[#37384e]">
-  <section class="bg-white rounded-[35px] min-h-[560px]">
-    <div class="grid grid-cols-[1.1fr_0.9fr] p-5 !h-full">
-      <div class="flex flex-col gap-[30px] px-12 py-20">
-        <h1 class="title-content text-5xl font-bold text-[#282839]">Stay updated!</h1>
+  <section
+    class="bg-white rounded-[35px] tablet:!rounded-none min-h-[560px] tablet:max-h-full tablet:min-h-screen tablet:w-screen">
+    <div class="grid grid-cols-[1.1fr_0.9fr] gap-11 p-6 mobile:p-0 !h-full tablet:grid-cols-1 tablet:grid-rows-[1fr_1fr] mobile:grid-rows-[0.7fr_1.3fr]">
+      <div class="flex flex-col gap-[10px] px-10 py-20 tablet:py-10 tablet:px-5 mobile:py-5 mobile:px-2.5 tablet:order-1">
+        <h1 class="title-content text-[52px] font-bold text-[#282839]">Stay updated!</h1>
         <p class="description-content max-w-[42ch] text-black">Join 60,000+ product managers receiving monthly updates
           on:</p>
-        <div class="list-content flex flex-col gap-3 text-black">
-          <div class="flex gap-4"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg"
+        <ul class="list-content flex flex-col gap-2 text-black py-4">
+          <li class="flex gap-4 max-w-[36ch]"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg"
               alt="Icon List">Product discovery and
             building
-            what matters</div>
-          <div class="flex gap-4"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg"
+            what matters</li>
+          <li class="flex gap-4 max-w-[36ch]"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg"
               alt="Icon List">Measuring to ensure updates
             are
-            a success</div>
-          <div class="flex gap-4"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg"
-              alt="Icon List">And much more!</div>
-        </div>
+            a success</li>
+          <li class="flex gap-4 max-w-[36ch]"><img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List">And
+            much more!</li>
+        </ul>
         <form class="flex flex-col gap-1" action="">
-          <label class="text-xs font-bold" for="">Email address</label>
+          <label class="text-xs font-bold mb-2" for="email" id="email">Email address</label>
           <div class="flex flex-col gap-6">
             <input
               class="border-[#b6b6b8] rounded-md px-4 border-2 h-12 flex items-center justify-center text-black placeholder: "
-              type="text" id="email" placeholder="email@company.com">
-            <a href="#" class="bg-[#242543] rounded-md h-12 flex font-semibold items-center justify-center text-white"
+              type="email" id="email" placeholder="email@company.com">
+            <a href="#"
+              class="bg-[#242543] rounded-md h-12 flex font-semibold items-center justify-center text-white hover:brightness-90"
               value="">Subscribe to
               monthly newsletter</a>
           </div>
         </form>
       </div>
       <div
-        class="bg-[url('../assets/images/illustration-sign-up-desktop.svg')] !bg-cover min-h-max h-full bg-center rounded-[25px]">
+        class="bg-[url('../assets/images/illustration-sign-up-desktop.svg')] !bg-cover h-full tablet:rounded-br-lg tablet:!bg-center tablet:h-auto tablet:w-full bg-center rounded-[25px]">
       </div>
     </div>
   </section>
