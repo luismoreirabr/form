@@ -44,19 +44,18 @@
             <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />And much more!
           </li>
         </ul>
-        <form class="flex flex-col gap-1" action="">
-          <div class="flex flex-col">
-            <label class="text-xs font-bold mb-2" for="email" id="email">Email address</label>
-            <span id="error-email"></span>
+        <form class="flex flex-col gap-1" id="form" action="">
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold mb-2" for="email">Email address</label>
             <input
               class="border-[#b6b6b8] mb-6 rounded-md px-4 border-2 h-14 flex items-center justify-center text-black invalid:border-red-700 focus:outline-none"
-              type="email" id="email" onblur="validarEmail()" onfocus="redefinirMsg()" for="email"
-              placeholder="email@company.com" />
-            <span id="error-email" class="text-red-600"></span>
-            <submit href="#"
-              class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
-              value="" type="submit" id="showModalBtn">Subscribe to monthly newsletter</submit>
+              type="email" placeholder="email@company.com" onblur="validarEmail()" onfocus="redefinirMsg()"
+              id="email" />
+            <span class="text-red-600" id="error-email"></span>
           </div>
+          <input
+            class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
+            type="submit" id="showModalBtn" />
         </form>
       </div>
       <div
@@ -112,6 +111,11 @@
     }
   }
 
+  const form = document.getElementById('form')
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    console.log('Deu certo')
+  })
 </script>
 
 </html>
