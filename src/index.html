@@ -71,60 +71,17 @@
         Thanks for subscribing!
       </h1>
       <p class="text-black">
-        A confirmation email has been sent to <span class="font-bold" id="display-email"></span>. Please open it and click the button
+        A confirmation email has been sent to <span class="font-bold" id="display-email"></span>. Please open it and
+        click the button
         inside to confirm
         your subscription.
       </p>
       <a href="./index.html"
         class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
-        value="" id="btnsubs">Dismiss message</a>
+        value="" onclick="closeModal()" id="btnsubs">Dismiss message</a>
     </div>
   </article>
 </body>
-<script>
-  const showModalButton = document.getElementById("showModalBtn");
-  const modal = document.getElementById("successModal");
-
-  showModalButton.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
-  });
-
-  // Dismiss modal when "Dismiss message" is clicked
-  const dismissButton = document.getElementById("btnsubs");
-  dismissButton.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
-
-  showModalButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    const email = document.querySelector("#email");
-    const value = email.value;
-    document.getElementById("display-email").innerHTML = email.value;
-  });
-
-  function validarEmail() {
-    var email = document.querySelector('#email');
-    var error = document.querySelector('#error-email');
-
-    if (!email.checkValidity()) {
-      error.innerHTML = "Valid email required";
-    }
-
-  }
-
-  function redefinirMsg() {
-    var error = document.querySelector('#error-email');
-    if (error.innerHTML == "Valid email required") {
-      error.innerHTML = "";
-    }
-  }
-
-  const form = document.getElementById('form')
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-  })
-</script>
 
 </html>
 
