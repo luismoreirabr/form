@@ -48,14 +48,14 @@
           <div class="flex flex-col gap-2">
             <label class="text-xs font-bold mb-2" for="email">Email address</label>
             <input
-              class="border-[#b6b6b8] mb-6 rounded-md px-4 border-2 h-14 flex items-center justify-center text-black invalid:border-red-700 focus:outline-none"
+              class="border-[#b6b6b8] rounded-md px-4 border-2 h-14 flex items-center justify-center text-black invalid:border-red-700 focus:outline-none"
               type="email" placeholder="email@company.com" onblur="validarEmail()" onfocus="redefinirMsg()"
               id="email" />
             <span class="text-red-600" id="error-email"></span>
           </div>
           <input
             class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
-            type="submit" id="showModalBtn" />
+            type="submit" id="showModalBtn" value="Enviar" />
         </form>
       </div>
       <div
@@ -70,7 +70,8 @@
         Thanks for subscribing!
       </h1>
       <p class="text-black">
-        A confirmation email has been sent to example@email.com. Please open it and click the button inside to confirm
+        A confirmation email has been sent to <span id="display-email"></span>. Please open it and click the button
+        inside to confirm
         your subscription.
       </p>
       <a href="./index.html"
@@ -94,19 +95,26 @@
     modal.classList.add("hidden");
   });
 
+  showModalButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    const email = document.querySelector("#email");
+    const value = email.value;
+    document.getElementById("display-email").innerHTML = email.value;
+  });
+
   function validarEmail() {
     var email = document.querySelector('#email');
     var error = document.querySelector('#error-email');
 
     if (!email.checkValidity()) {
-      error.innerHTML = "Email invalido";
+      error.innerHTML = "Invalid email";
     }
 
   }
 
   function redefinirMsg() {
     var error = document.querySelector('#error-email');
-    if (error.innerHTML == "Email invalido") {
+    if (error.innerHTML == "Invalid email") {
       error.innerHTML = "";
     }
   }
@@ -114,7 +122,6 @@
   const form = document.getElementById('form')
   form.addEventListener('submit', e => {
     e.preventDefault()
-    console.log('Deu certo')
   })
 </script>
 
