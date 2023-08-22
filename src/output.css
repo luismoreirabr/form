@@ -554,12 +554,12 @@ video {
   margin-bottom: 1rem;
 }
 
-.flex {
-  display: flex;
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
-.\!flex {
-  display: flex !important;
+.flex {
+  display: flex;
 }
 
 .grid {
@@ -738,6 +738,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .text-\[52px\] {
   font-size: 52px;
 }
@@ -831,6 +836,10 @@ video {
     grid-template-rows: 1fr 1fr;
   }
 
+  .tablet\:rounded-none {
+    border-radius: 0px;
+  }
+
   .tablet\:\!bg-center {
     background-position: center !important;
   }
@@ -847,16 +856,77 @@ video {
 }
 
 @media (max-width: 640px) {
+  .mobile\:fixed {
+    position: fixed;
+  }
+
+  .mobile\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .mobile\:mt-auto {
+    margin-top: auto;
+  }
+
   .mobile\:h-auto {
     height: auto;
+  }
+
+  .mobile\:h-screen {
+    height: 100vh;
+  }
+
+  .mobile\:h-full {
+    height: 100%;
+  }
+
+  .mobile\:\!h-full {
+    height: 100% !important;
+  }
+
+  .mobile\:max-h-full {
+    max-height: 100%;
+  }
+
+  .mobile\:\!max-h-full {
+    max-height: 100% !important;
+  }
+
+  .mobile\:w-screen {
+    width: 100vw;
+  }
+
+  .mobile\:w-full {
+    width: 100%;
+  }
+
+  .mobile\:\!w-full {
+    width: 100% !important;
+  }
+
+  .mobile\:\!w-auto {
+    width: auto !important;
+  }
+
+  .mobile\:\!w-max {
+    width: -moz-max-content !important;
+    width: max-content !important;
   }
 
   .mobile\:max-w-\[36ch\] {
     max-width: 36ch;
   }
 
+  .mobile\:max-w-full {
+    max-width: 100%;
+  }
+
   .mobile\:grid-rows-\[0\.7fr_1\.3fr\] {
     grid-template-rows: 0.7fr 1.3fr;
+  }
+
+  .mobile\:gap-8 {
+    gap: 2rem;
   }
 
   .mobile\:rounded-none {
@@ -890,6 +960,28 @@ video {
   .mobile\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .mobile\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .mobile\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mobile\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .mobile\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .mobile\:pt-24 {
+    padding-top: 6rem;
   }
 
   .mobile\:text-4xl {

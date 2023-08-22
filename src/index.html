@@ -20,7 +20,7 @@
 
 <body class="flex justify-center items-center min-h-screen bg-[#37384e]">
   <section
-    class="bg-white rounded-[35px] mobile:rounded-none min-h-[560px] tablet:max-h-full tablet:min-h-screen tablet:w-screen">
+    class="bg-white rounded-[35px] tablet:rounded-none min-h-[560px] tablet:max-h-full tablet:min-h-screen tablet:w-screen">
     <div
       class="grid grid-cols-[1.1fr_0.9fr] gap-8 p-6 mobile:p-0 h-full tablet:h-screen mobile:h-auto tablet:grid-cols-1 tablet:grid-rows-[1fr_1fr] mobile:grid-rows-[0.7fr_1.3fr]">
       <div
@@ -64,20 +64,21 @@
       </div>
     </div>
   </section>
-  <article id="successModal" class="absolute inset-0 z-[999] hidden items-center justify-center bg-black/40 p-4">
-    <div class="flex flex-col gap-10 bg-white p-10 max-w-[50ch] rounded-[35px]">
+  <article id="successModal"
+    class="absolute inset-0 z-[999] hidden items-center justify-center bg-black/40 p-4 mobile:p-0">
+    <div
+      class="flex flex-col gap-10 bg-white p-10 mobile:px-5 mobile:pb-10 mobile:pt-24 max-w-[50ch] mobile:!max-h-full mobile:!h-full rounded-[35px] mobile:rounded-none">
       <img class="w-[60px] h-[60px]" src="../assets/images/icon-list.svg" alt="Icon List" />
       <h1 class="text-[52px] mobile:text-4xl font-bold text-[#282839] leading-none">
         Thanks for subscribing!
       </h1>
       <p class="text-black">
-        A confirmation email has been sent to <span class="font-bold" id="display-email"></span>. Please open it and
-        click the button
-        inside to confirm
-        your subscription.
+        A confirmation email has been sent to
+        <span class="font-bold" id="display-email"></span>. Please open it and
+        click the button inside to confirm your subscription.
       </p>
       <a href="./index.html"
-        class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
+        class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90 mobile:mt-auto"
         value="" onclick="closeModal()" id="btnsubs">Dismiss message</a>
     </div>
   </article>
