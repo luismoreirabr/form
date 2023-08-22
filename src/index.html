@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,700&display=swap"
+    rel="stylesheet" />
+  <script src="./js.js"></script>
+
+  <link href="./output.css" rel="stylesheet" />
+  <title>Frontend Mentor</title>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-[#37384e]">
+  <section
+    class="bg-white rounded-[35px] tablet:rounded-none min-h-[560px] tablet:max-h-full tablet:min-h-screen tablet:w-screen">
+    <div
+      class="grid grid-cols-[1.1fr_0.9fr] gap-8 p-6 mobile:p-0 h-full tablet:h-screen mobile:h-auto tablet:grid-cols-1 tablet:grid-rows-[1fr_1fr] mobile:grid-rows-[0.7fr_1.3fr]">
+      <div
+        class="flex flex-col gap-[20px] px-10 py-14 tablet:py-10 tablet:px-5 mobile:py-5 mobile:px-2.5 tablet:order-1">
+        <h1 class="title-content text-[52px] mobile:text-4xl font-bold text-[#282839]">
+          Stay updated!
+        </h1>
+        <p class="description-content max-w-[42ch] text-black">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="list-content flex flex-col gap-2 text-black py-4">
+          <li class="flex gap-4 items-center mobile:max-w-[36ch]">
+            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />Product discovery and
+            building what matters
+          </li>
+          <li class="flex gap-4 items-center mobile:max-w-[36ch]">
+            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />Measuring to ensure
+            updates are a success
+          </li>
+          <li class="flex gap-4 items-center mobile:max-w-[36ch]">
+            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />And much more!
+          </li>
+        </ul>
+        <form class="flex flex-col gap-1" id="form" action="">
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between"><label class="text-xs font-bold mb-2" for="email">Email address</label>
+              <span class="text-red-600 text-xs font-bold mb-2" id="error-email"></span>
+            </div><input
+              class="border-[#b6b6b8] mb-4 rounded-md px-4 border-2 h-14 flex items-center justify-center text-black invalid:border-red-700 focus:outline-none"
+              type="email" placeholder="email@company.com" onblur="validarEmail()" onfocus="redefinirMsg()"
+              id="email" />
+
+          </div>
+          <input
+            class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90"
+            type="submit" id="showModalBtn" value="Subscribe to monthly newsletter" />
+        </form>
+      </div>
+      <div
+        class="bg-[url('../assets/images/illustration-sign-up-desktop.svg')] !bg-cover h-full mobile:!rounded-b-[35px] mobile:rounded-t-none tablet:!bg-center tablet:h-auto tablet:w-full bg-center rounded-[25px]">
+      </div>
+    </div>
+  </section>
+  <article id="successModal"
+    class="absolute inset-0 z-[999] hidden items-center justify-center bg-black/40 p-4 mobile:p-0">
+    <div
+      class="flex flex-col gap-10 bg-white p-10 mobile:px-5 mobile:pb-10 mobile:pt-24 max-w-[50ch] mobile:!max-h-full mobile:!h-full rounded-[35px] mobile:rounded-none">
+      <img class="w-[60px] h-[60px]" src="../assets/images/icon-list.svg" alt="Icon List" />
+      <h1 class="text-[52px] mobile:text-4xl font-bold text-[#282839] leading-none">
+        Thanks for subscribing!
+      </h1>
+      <p class="text-black">
+        A confirmation email has been sent to
+        <span class="font-bold" id="display-email"></span>. Please open it and
+        click the button inside to confirm your subscription.
+      </p>
+      <a href="./index.html"
+        class="bg-[#242543] rounded-md h-14 flex font-semibold items-center justify-center text-white hover:brightness-90 mobile:mt-auto"
+        value="" onclick="closeModal()" id="btnsubs">Dismiss message</a>
+    </div>
+  </article>
+</body>
+
+</html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
