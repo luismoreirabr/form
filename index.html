@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,700&display=swap"
     rel="stylesheet" />
-  <script src="./js.js"></script>
+  <script src="./src/js.js"></script>
 
-  <link href="./output.css" rel="stylesheet" />
+  <link href="./src/output.css" rel="stylesheet" />
   <title>Frontend Mentor</title>
 </head>
 
@@ -31,17 +31,17 @@
         <p class="max-w-[42ch] text-black">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
-        <ul class="list-content flex flex-col gap-2 text-black py-4">
+        <ul class="font-thin flex flex-col gap-2 text-black py-4">
           <li class="flex gap-4 items-center mobile:max-w-[36ch]">
-            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />Product discovery and
+            <img class="w-[20px] h-[20px]" src="./assets/images/icon-list.svg" alt="Icon List" />Product discovery and
             building what matters
           </li>
           <li class="flex gap-4 items-center mobile:max-w-[36ch]">
-            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />Measuring to ensure
+            <img class="w-[20px] h-[20px]" src="./assets/images/icon-list.svg" alt="Icon List" />Measuring to ensure
             updates are a success
           </li>
           <li class="flex gap-4 items-center mobile:max-w-[36ch]">
-            <img class="w-[20px] h-[20px]" src="../assets/images/icon-list.svg" alt="Icon List" />And much more!
+            <img class="w-[20px] h-[20px]" src="./assets/images/icon-list.svg" alt="Icon List" />And much more!
           </li>
         </ul>
         <form class="flex flex-col gap-1" id="form" action="">
@@ -52,7 +52,8 @@
             </div>
             <input
               class="border-[#b6b6b8] bg-white mb-4 rounded-md px-4 outline-none border-2 h-14 flex items-center justify-center text-black focus:outline-none"
-              type="email" placeholder="email@company.com" onkeypress="validarEmail(this.value)" id="email" required />
+              type="email" placeholder="email@company.com" onkeypress="validarEmail(this.value)"
+              onchange="validarEmail(this.value)" id="email" required />
           </div>
           <input
             class="bg-[#242543] hover:bg-[#363763] duration-300 hover:cursor-pointer rounded-md h-14 flex font-semibold items-center justify-center text-white"
@@ -68,7 +69,7 @@
     class="absolute inset-0 z-[999] hidden items-center justify-center bg-black/20 p-4 mobile:p-0 mobile:!max-h-full mobile:!h-screen mobile:!w-full mobile:!max-w-full">
     <div
       class="flex flex-col gap-10 bg-white py-10 px-14 mobile:px-5 mobile:pb-10 mobile:pt-24 max-w-[55ch] mobile:max-w-full mobile:w-full mobile:!max-h-full mobile:!h-full rounded-[35px] mobile:rounded-none">
-      <img class="w-[60px] h-[60px]" src="../assets/images/icon-list.svg" alt="Icon List" />
+      <img class="w-[60px] h-[60px]" src="./assets/images/icon-list.svg" alt="Icon List" />
       <h1 class="text-[52px] mobile:text-4xl font-bold text-[#282839] leading-none">
         Thanks for subscribing!
       </h1>
